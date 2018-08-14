@@ -1,11 +1,7 @@
 <?php
-
 namespace davidjeddy\Normie\Strings;
 
-class Strings
-{
-    static function stristr($needle, $haystack, $before_needle = FALSE) {
-        return \stristr($haystack, $needle, $before_needle);
-    }
+function stristr($needle, $haystack, $before_needle = FALSE) {
+    echo 'asdf';
+    return \stristr($haystack, $needle, $before_needle);
 }
-
