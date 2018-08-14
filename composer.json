@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "davidjeddy\\Normie\\": ["src/"]
+            "davidjeddy\\Normie\\": "/src"
         }
     },
     "license": "MIT",
