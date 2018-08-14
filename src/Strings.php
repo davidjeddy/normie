@@ -1,5 +1,5 @@
 <?php
-namespace davidjeddy\Normie\Strings;
+namespace davidjeddy\Normie;
 
 class Strings
 {
