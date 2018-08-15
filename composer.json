@@ -6,6 +6,7 @@
         "php": ">=7.0"
     },
     "autoload": {
+        "files": ["./src/Arrays.php"],
         "psr-4": {
             "Normie\\": "/src"
         }
