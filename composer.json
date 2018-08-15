@@ -1,5 +1,5 @@
 {
-    "name": "davidjeddy/Normie",
+    "name": "davidjeddy/normie",
     "description": "Attempt to normalize the PHP standard library array and string function parameter order.",
     "type": "library",
     "require": {
