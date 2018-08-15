@@ -22,7 +22,7 @@ Via [Composer](https://getcomposer.org):
 
     php composer.phar install <New base project>
     git clone https://github.com/davidjeddy/normie.git ./library_under_dev
-    ln -sfn /app/library_under_dev ./vendor/davidjeddy/Normie
+    ln -sfn ./vendor/davidjeddy/Normie /app/library_under_dev
 
 ### String function parameter order
 SPL: strpos  ( string $haystack  , mixed $needle  [, int $offset= 0  ] )
