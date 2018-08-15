@@ -12,6 +12,18 @@ In instances where callbacks are a parameter the callback will be the first para
 
 ## Example
 
+## Install
+
+Via [Composer](https://getcomposer.org):
+
+    php composer.phar require davidjeddy/normie
+    
+## Library Under Development Setup
+
+    php composer.phar install <New base project>
+    git clone https://github.com/davidjeddy/normie.git ./library_under_dev
+    ln -sfn /app/library_under_dev/ ./vendor/davidjeddy/Normie
+
 ### String function parameter order
 SPL: strpos  ( string $haystack  , mixed $needle  [, int $offset= 0  ] )
 
@@ -29,3 +41,11 @@ SPL: array_filter  ( array $input  [, callback $callback  ] )
 
 Normie: array_filter  ( [ callback $callback  ], array $input )
 
+## Usage
+
+    <?php
+    ...
+    $return = \normie\stristr($what, $in_where);
+    ...
+
+    
