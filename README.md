@@ -38,24 +38,27 @@ Install the required development packaged
     
 ##### phpunit
 
-
     ./vendor/bin/phpunit --bootstrap vendor/autoload.php ./tests
 
 ##### php-cs-fixer
 
-    php ./vendor/bin/php-cs-fixer fix ./src
+    ./vendor/bin/php-cs-fixer fix ./src
 
 ##### phpcs
 
-    php ./vendor/bin/phpcbf -p ./src/
+    ./vendor/bin/phpcbf -p ./src/
 
 ##### phpmd
 
-    php ./vendor/bin/phpcbf -pw ./src/
-    
+    ./vendor/bin/phpmd src/ html unusedcode --reportfile ./reports/phpmd/phpmd.html
+
+##### phpmnd
+
+    ./vendor/bin/phpmnd ./src/
+        
 ##### phpstan
 
-    ./vendor/bin/phpstan analyse ./src
+    ./vendor/bin/phpstan analyse ./src --level 7
 
 ##### phploc
 
@@ -65,7 +68,7 @@ Install the required development packaged
     
     ./vendor/bin/phpcpd ./src
 
-##### phpmnd
+##### dephpend
 
     ./vendor/bin/dephpend metrics ./src
 
@@ -79,7 +82,7 @@ Install the required development packaged
 
 ##### phpmetrics
 
-    php ./vendor/bin/phpmetrics ./src
+    ./vendor/bin/phpmetrics ./src
     
 ## Examples
 Function parameter order examples.
