@@ -6,12 +6,12 @@
 /**
  * Swapping $delimiter and $string positions
  *
- * @param string $string
- * @param string $delimiter
- * @param int $limit
+ * @param  string $string
+ * @param  string $delimiter
+ * @param  int    $limit
  * @return array
  */
-function norm_explode (string $string, string $delimiter, $limit = PHP_INT_MAX): array
+function norm_explode(string $string, string $delimiter, $limit = PHP_INT_MAX): array
 {
     return explode($delimiter, $string, $limit);
 }
@@ -19,11 +19,11 @@ function norm_explode (string $string, string $delimiter, $limit = PHP_INT_MAX):
 /**
  * Swapping $glue and $pieces positions
  *
- * @param array $pieces
- * @param string $glue
+ * @param  array  $pieces
+ * @param  string $glue
  * @return string
  */
-function norm_implode (array $pieces, string $glue): string
+function norm_implode(array $pieces, string $glue): string
 {
     return implode($glue, $pieces);
 }
@@ -31,11 +31,11 @@ function norm_implode (array $pieces, string $glue): string
 /**
  * Swapping $pieces and $glue positions
  *
- * @param string $glue
- * @param array $pieces
+ * @param  string $glue
+ * @param  array  $pieces
  * @return string
  */
-function norm_join (array $pieces, string $glue): string
+function norm_join(array $pieces, string $glue): string
 {
     return implode($glue, $pieces);
 }
@@ -43,13 +43,13 @@ function norm_join (array $pieces, string $glue): string
 /**
  * Added return value.
  *
- * @param string $encoded_string
- * @param array $result
+ * @param  string $encoded_string
+ * @param  array  $result
  * @return array
  */
-function norm_parse_str (string $encoded_string, array &$result): array
+function norm_parse_str(string $encoded_string, array &$result): array
 {
-    parse_str ($encoded_string, $result);
+    parse_str($encoded_string, $result);
 
     return $result;
 }

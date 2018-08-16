@@ -58,7 +58,7 @@ Install the required development packaged
 
 ##### phpmd
 
-    php ./vendor/bin/phpmd ./src text cleancode 
+    php ./vendor/bin/phpcbf -pw ./src/
     
 ##### phpstan
 
