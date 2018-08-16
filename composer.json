@@ -6,10 +6,10 @@
         "php": ">=7.0"
     },
     "autoload": {
-        "files": ["./src/Arrays.php"],
-        "psr-4": {
-            "Normie\\": "/src"
-        }
+        "files": [
+            "./src/Arrays.php",
+            "./src/Strings.php"
+        ]
     },
     "license": "MIT",
     "authors": [
