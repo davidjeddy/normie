@@ -25,16 +25,57 @@ Via [Composer](https://getcomposer.org):
     ln -sfn -T ../../lib_under_dev/ ./vendor/davidjeddy/Normie
 
 
-## Testing
+## Testing / Quality Tools
 
 Install the required development packaged
 
     php composer.phar install --dev -vvv -o
+    
+##### phpunit
 
-then execute the (unit) tests
 
-    ./vendor/bin/phpunit --bootstrap vendor/autoload.php ./tests/
+    ./vendor/bin/phpunit --bootstrap vendor/autoload.php ./tests
 
+##### php-cs-fixer
+
+    php ./vendor/bin/php-cs-fixer fix ./src
+
+##### phpcs
+
+    php ./vendor/bin/phpcbf -p ./src/
+
+##### phpmd
+
+    php ./vendor/bin/phpmd ./src text cleancode 
+    
+##### phpstan
+
+    ./vendor/bin/phpstan analyse ./src
+
+##### phploc
+
+    ./vendor/bin/phploc ./src
+
+##### phpcpd
+    
+    ./vendor/bin/phpcpd ./src
+
+##### phpmnd
+
+    ./vendor/bin/dephpend metrics ./src
+
+##### churn
+
+    ./vendor/bin/churn run src
+
+##### phpcf
+
+    ./vendor/bin/phpcf ./src
+
+##### phpmetrics
+
+    php ./vendor/bin/phpmetrics ./src
+    
 ## Examples
 Function parameter order examples.
 

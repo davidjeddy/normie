@@ -1,2 +1,4 @@
 *.phar
+*.cache
+/reports/*
 /vendor/*
