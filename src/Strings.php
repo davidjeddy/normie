@@ -39,13 +39,13 @@ function norm_join(array $pieces, string $glue): string
 /**
  * Added return value.
  *
- * @param  string $encoded_string
+ * @param  string $string
  * @param  array  $result
  * @return array
  */
-function norm_parse_str(string $encoded_string, array &$result): array
+function norm_parse_str(string $string, array &$result): array
 {
-    parse_str($encoded_string, $result);
+    parse_str($string, $result);
 
     return $result;
 }
