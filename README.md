@@ -18,6 +18,27 @@
 ## Description
 Normie attempts to make using the PHP Standard Library (SPL) function calls more consistant by implimenting a norm_{funciton name}() wrapper function declariations. This library DOES NOT over ride the SPL functions in any way. 
 
+   
+## Examples
+Function parameter order examples.
+
+*TODO*
+
+##### Arrays fn()
+
+function(data_being_operated_on, additional_parameter, ...)
+
+OR
+
+function(callback, data_being_operated_on, additional_parameter, ...)
+
+##### Strings fn()
+function(data_being_operated_on, additional_parameter, ...)
+
+OR
+
+function(callback, data_being_operated_on, additional_parameter, ...)
+
 ## Install
 
 Via [Composer](https://getcomposer.org):
@@ -83,11 +104,6 @@ Install the required development packaged
 ##### phpmetrics
 
     ./vendor/bin/phpmetrics ./src
-    
-## Examples
-Function parameter order examples.
-
-*TODO*
 
 ## Usage
 Usage is easy! Add the namespace declaration to your logic, then any time you want to use a `normilized` version of a function you know add `norm_` to the beginning. Now all array and string function parameters are in a predicatable order!
