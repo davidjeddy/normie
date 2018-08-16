@@ -61,7 +61,12 @@ Normie: array_filter  ( [ callback $callback  ], array $input )
     
     namespace Your\Class\Name;
     
-    use Normie\{ Array, String };
+    ...
+    use Normie\Array;
+    use Normie\String;
+    ...
+    
+    // some code for your application
     
     ...
         $results = norm_stristr($key, $heystack);

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Impliment the SPL stristr parameters in the `find X in Y` order.
+ * Implement the SPL stristr parameters in the `find X in Y` order.
  * 
  * @param $needle
  * @param $haystack
