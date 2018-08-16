@@ -1,17 +1,13 @@
 <?php
 /**
- * These functions sort the SPL function parameters into a `search X for Y value with Z limit (or range)`.
- */
-
-/**
  * Swapping $delimiter and $string positions
  *
  * @param  string $string
  * @param  string $delimiter
  * @param  int    $limit
- * @return array
+ * @return array<int, string>|false
  */
-function norm_explode(string $string, string $delimiter, $limit = PHP_INT_MAX): array
+function norm_explode(string $string, string $delimiter, $limit = PHP_INT_MAX)
 {
     return explode($delimiter, $string, $limit);
 }

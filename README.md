@@ -50,7 +50,7 @@ Install the required development packaged
 
 ##### phpmd
 
-    ./vendor/bin/phpmd src/ html unusedcode --reportfile ./reports/phpmd/phpmd.html
+    ./vendor/bin/phpmd src/ text codesize,unusedcode,naming
 
 ##### phpmnd
 
