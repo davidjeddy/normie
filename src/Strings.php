@@ -40,3 +40,16 @@ function norm_join (array $pieces, string $glue): string
     return implode($glue, $pieces);
 }
 
+/**
+ * Added return value.
+ *
+ * @param string $encoded_string
+ * @param array $result
+ * @return array
+ */
+function norm_parse_str (string $encoded_string, array &$result): array
+{
+    parse_str ($encoded_string, $result);
+
+    return $result;
+}
