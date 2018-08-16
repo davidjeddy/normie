@@ -17,7 +17,7 @@
 
     "description": "Attempt to normalize the PHP standard library array and string function parameter order.",
     "license": "MIT",
-    "name": "davidjeddy/Normie",
+    "name": "davidjeddy/normie",
     "require": {
         "php": "^7.1"
     },
