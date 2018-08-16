@@ -1,17 +1,42 @@
 <?php
 /**
- *
+ * These functions sort the SPL function parameters into a `search X for Y value with Z limit (or range)`.
  */
 
 /**
- * Implement the SPL stristr parameters in the `find X in Y` order.
+ * Swapping $delimiter and $string positions
  *
- * @param  $needle
- * @param  $haystack
- * @param  bool     $before_needle
+ * @param string $string
+ * @param string $delimiter
+ * @param int $limit
+ * @return array
+ */
+function norm_explode (string $string, string $delimiter, $limit = PHP_INT_MAX): array
+{
+    return explode($delimiter, $string, $limit);
+}
+
+/**
+ * Swapping $glue and $pieces positions
+ *
+ * @param array $pieces
+ * @param string $glue
  * @return string
  */
-function norm_stristr($needle, $haystack, $before_needle = false)
+function norm_implode (array $pieces, string $glue): string
 {
-    return \stristr($haystack, $needle, $before_needle);
+    return implode($glue, $pieces);
 }
+
+/**
+ * Swapping $pieces and $glue positions
+ *
+ * @param string $glue
+ * @param array $pieces
+ * @return string
+ */
+function norm_join (array $pieces, string $glue): string
+{
+    return implode($glue, $pieces);
+}
+
