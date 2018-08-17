@@ -51,39 +51,30 @@ Via [Composer](https://getcomposer.org):
     git clone https://github.com/davidjeddy/normie.git ./library_under_dev
     ln -sfn -T ../../lib_under_dev/ ./vendor/davidjeddy/Normie
 
-## Testing / Quality Tools
+## Testing / Quality / Reporting Tools
+
 
 Install the required development packaged
 
     php composer.phar install --dev -vvv -o
     
-##### phpunit
-
-    ./vendor/bin/phpunit --bootstrap vendor/autoload.php ./tests
+#### Quality
 
 ##### php-cs-fixer
 
     ./vendor/bin/php-cs-fixer fix ./src
 
-##### phpcs
-
-    ./vendor/bin/phpcbf -p ./src/
-
-##### phpmd
-
-    ./vendor/bin/phpmd src/ text codesize,unusedcode,naming
-
 ##### phpmnd
 
-    ./vendor/bin/phpmnd ./src/
-        
+    ./vendor/bin/phpmnd ./src/ --progress
+
 ##### phpstan
 
     ./vendor/bin/phpstan analyse ./src --level 7
 
 ##### phploc
 
-    ./vendor/bin/phploc ./src
+    ./vendor/bin/phploc ./src --count-tests
 
 ##### phpcpd
     
@@ -101,9 +92,25 @@ Install the required development packaged
 
     ./vendor/bin/phpcf ./src
 
+#### Reporting
+
+##### phpcs
+
+    ./vendor/bin/phpcs -p ./src/ --colors --report=source --report-file=./reports/phpcs.txt
+
+##### phpmd
+
+    ./vendor/bin/phpmd ./src html codesize,unusedcode,naming --reportfile ./reports/phpmd.html
+
 ##### phpmetrics
 
-    ./vendor/bin/phpmetrics ./src
+    ./vendor/bin/phpmetrics --report-html=./reports ./src/
+
+#### Testing
+
+##### phpunit
+
+    ./vendor/bin/phpunit --bootstrap vendor/autoload.php ./tests
 
 ## Usage
 Usage is easy! Add the namespace declaration to your logic, then any time you want to use a `normilized` version of a function you know add `norm_` to the beginning. Now all array and string function parameters are in a predicatable order!
