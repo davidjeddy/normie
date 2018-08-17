@@ -1,5 +1,15 @@
 <?php
 /**
+ * Strings normalization functions
+ *
+ * @category helper functions
+ * @package  Normie
+ * @author   David J Eddy <me@davidjeddy.com>
+ * @license  MIT
+ * @link     https://github.com/davidjeddy/normie
+ */
+
+/**
  * Swapping $delimiter and $string positions
  *
  * @param  string $string
