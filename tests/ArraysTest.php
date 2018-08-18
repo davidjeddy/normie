@@ -9,6 +9,8 @@ final class ArraysTest extends TestCase
 
     private $testArray = ['a', 'b', 'c', 'd', 'e'];
 
+    private $testArray2 = ['c', 'd', 'e', 'f', 'g'];
+
     private $testEncodedString = 'text=Hello+G%C3%BCnter';
 
     public function test_norm_array_key_exists(): void
@@ -19,4 +21,18 @@ final class ArraysTest extends TestCase
         $this->assertEquals(true, $result);
     }
 
+    public function test_norm_array_map(): void
+    {
+
+    }
+
+    public function test_norm_array_search(): void
+    {
+
+    }
+
+    public function test_norm_in_array(): void
+    {
+
+    }
 }

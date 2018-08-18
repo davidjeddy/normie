@@ -22,22 +22,21 @@ Normie attempts to make using the PHP Standard Library (SPL) function calls more
 ## Examples
 Function parameter order examples.
 
-*TODO*
-
 ##### Arrays fn()
 
-function(data_being_operated_on, additional_parameter, ...)
+    function(data_being_operated_on, additional_parameter, ...)
 
 OR
 
-function(callback, data_being_operated_on, additional_parameter, ...)
+    function(callback, data_being_operated_on, additional_parameter, ...)
 
 ##### Strings fn()
-function(data_being_operated_on, additional_parameter, ...)
+
+    function(data_being_operated_on, additional_parameter, ...)
 
 OR
 
-function(callback, data_being_operated_on, additional_parameter, ...)
+    function(callback, data_being_operated_on, additional_parameter, ...)
 
 ## Install
 
