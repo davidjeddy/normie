@@ -16,27 +16,25 @@
  - David J Eddy <me@davidjeddy.com>
  
 ## Description
-Normie attempts to make using the PHP Standard Library (SPL) function calls more consistant by implimenting a norm_{funciton name}() wrapper function declariations. This library DOES NOT over ride the SPL functions in any way. 
+Normie attempts to make using the PHP Standard Library (SPL) function calls more consistent by implementing a norm_{function name}() wrapper function declarations. This library DOES NOT over ride the SPL functions in any way.
 
-   
 ## Examples
 Function parameter order examples.
 
 ##### Arrays fn()
 
-    function(data_being_operated_on, additional_parameter, ...)
+Normie array functions follow the 'array source X, operator Y (callback,key, needle, etc), other parameters are Z' mentality. The complete list of array functions are viewable [here](./src/Atrings.php).
 
-OR
-
-    function(callback, data_being_operated_on, additional_parameter, ...)
+SPL:    array array_map     ( callable $callback, array $arr1, array $_ = null) { }
+Normie: array norm_array_map( array $array, callable $callback, array $userdata = null): array
 
 ##### Strings fn()
 
-    function(data_being_operated_on, additional_parameter, ...)
+Normie string functions follow the 'Search X string or Y target, replace with Z string' mentality. The complete list of  string functions are viewable [here](./src/Strings.php).
 
-OR
+SPL:    array explode ( string $delimiter , string $string [, int $limit = PHP_INT_MAX ] )
+Normie: array explode ( string $string , string $delimiter [, int $limit = PHP_INT_MAX ] )
 
-    function(callback, data_being_operated_on, additional_parameter, ...)
 
 ## Install
 

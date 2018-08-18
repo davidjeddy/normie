@@ -35,7 +35,7 @@ function norm_implode(array $pieces, string $glue): string
 }
 
 /**
- * Swapping $pieces and $glue positions
+ * Swapping $glue and $pieces positions
  *
  * @param  string $glue
  * @param  array  $pieces
@@ -44,6 +44,18 @@ function norm_implode(array $pieces, string $glue): string
 function norm_join(array $pieces, string $glue): string
 {
     return implode($glue, $pieces);
+}
+
+/**
+ * @param  mixed   $subject
+ * @param  mixed   $search
+ * @param  mixed   $replace
+ * @param  integer $count
+ * @return mixed
+ */
+function norm_str_replace($subject, $search, $replace, $count = 1)
+{
+    return str_replace($search, $replace, $subject, $count);
 }
 
 /**

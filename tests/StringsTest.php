@@ -30,6 +30,14 @@ final class StringsTest extends TestCase
         $this->assertEquals('a|b|c|d|e', $result);
     }
 
+    public function test_norm_str_replace(): void
+    {
+        $result1 = norm_str_replace($this->testString, 'mno', ABC);
+        $result2 = str_replace('mno', 'ABC', $this->testString);
+
+        $this->assertEquals($result1, $result2);
+    }
+
     public function test_norm_parse_str(): void
     {
         $expected = ['text' => 'Hello Günter'];
