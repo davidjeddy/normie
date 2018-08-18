@@ -20,34 +20,34 @@ function norm_array_key_exists(array $array, $key): bool
 }
 
 /**
- * @param array $array1
- * @param callable $callback
- * @param array $userdata
+ * @param  array    $array
+ * @param  callable $callback
+ * @param  array    $userdata
  * @return array
  */
-function norm_array_map(array $array1, callable $callback, array $userdata): array
+function norm_array_map(array $array, callable $callback, array $userdata): array
 {
-    return array_map($callback, $array1, $userdata);
+    return array_map($callback, $array, $userdata);
 }
 
 /**
- * @param array $array1
- * @param mixed $needle
- * @param bool $strict
- * @return false|int|string
+ * @param  array $array
+ * @param  mixed $needle
+ * @param  bool  $strict
+ * @return int|string|false|null
  */
-function norm_array_search(array $array1, $needle, bool $strict = FALSE)
+function norm_array_search(array $array, $needle, bool $strict = false)
 {
-    return array_search($needle, $array1, $strict);
+    return array_search($needle, $array, $strict);
 }
 
 /**
- * @param array $array1
- * @param mixed $needle
- * @param bool $strict
+ * @param  array $array
+ * @param  mixed $needle
+ * @param  bool  $strict
  * @return bool
  */
-function norm_in_array(array $array1, $needle, bool $strict = FALSE): bool
+function norm_in_array(array $array, $needle, bool $strict = false): bool
 {
-     return in_array($needle, $array1, $strict);
+    return in_array($needle, $array, $strict);
 }
