@@ -26,6 +26,7 @@ Function parameter order examples.
 Normie array functions follow the 'array source X, operator Y (callback,key, needle, etc), other parameters are Z' mentality. The complete list of array functions are viewable [here](./src/Atrings.php).
 
 SPL:    array array_map     ( callable $callback, array $arr1, array $_ = null) { }
+
 Normie: array norm_array_map( array $array, callable $callback, array $userdata = null): array
 
 ##### Strings fn()
@@ -33,6 +34,7 @@ Normie: array norm_array_map( array $array, callable $callback, array $userdata 
 Normie string functions follow the 'Search X string or Y target, replace with Z string' mentality. The complete list of  string functions are viewable [here](./src/Strings.php).
 
 SPL:    array explode ( string $delimiter , string $string [, int $limit = PHP_INT_MAX ] )
+
 Normie: array explode ( string $string , string $delimiter [, int $limit = PHP_INT_MAX ] )
 
 
