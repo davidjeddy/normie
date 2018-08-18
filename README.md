@@ -16,7 +16,7 @@
  - David J Eddy <me@davidjeddy.com>
  
 ## Description
-Normie attempts to make using the PHP Standard Library (SPL) function calls more consistent by implementing a norm_{function name}() wrapper function declarations. This library DOES NOT over ride the SPL functions in any way.
+Normie (short for Normalizer) attempts to make using the PHP Standard Library (SPL) function calls more consistent by implementing a norm_{function name}() wrapper function declarations. This library DOES NOT over ride the SPL functions in any way.
 
 ## Examples
 Function parameter order examples.
