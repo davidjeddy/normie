@@ -25,9 +25,12 @@ function norm_array_key_exists(array $array, $key): bool
  * @param  array    $userdata
  * @return array
  */
-function norm_array_map(array $array, callable $callback, array $userdata): array
+function norm_array_map(array $array, callable $callback, array $userdata = null): array
 {
-    return array_map($callback, $array, $userdata);
+    if ($userdata != null) {
+        return array_map($callback, $array, $userdata);
+    }
+    return array_map($callback, $array);
 }
 
 /**
