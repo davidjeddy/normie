@@ -14,8 +14,7 @@
             "./src/Strings.php"
         ]
     },
-
-    "description": "Attempt to normalize the PHP standard library array and string function parameter order.",
+    "description": "Wrapper library that provides normalized function interfaces for the PHP standard library.",
     "license": "MIT",
     "name": "davidjeddy/normie",
     "require": {
@@ -33,7 +32,10 @@
         "dephpend/dephpend": "dev-master",
         "bmitch/churn-php": "^1",
         "wapmorgan/php-code-fixer": "dev-master",
-        "phpmetrics/phpmetrics": "^2"
+        "phpmetrics/phpmetrics": "^2",
+        "roave/security-advisories": "dev-master",
+        "phpro/grumphp": "^0.14.1",
+        "phpbench/phpbench": "^0.14.0"
     },
     "type": "library"
 }
