@@ -2,11 +2,15 @@
 
 ## Badges
 [![Build Status](https://semaphoreci.com/api/v1/davidjeddy/normie/branches/master/shields_badge.svg)](https://semaphoreci.com/davidjeddy/normie)
+[![License](https://poser.pugx.org/davidjeddy/normie/license?format=flat-square)](https://packagist.org/packages/davidjeddy/normie)
 
 [![Latest Stable Version](https://poser.pugx.org/davidjeddy/normie/v/stable?format=flat-square)](https://packagist.org/packages/davidjeddy/normie)
 [![Latest Unstable Version](https://poser.pugx.org/davidjeddy/normie/v/unstable?format=flat-square)](https://packagist.org/packages/davidjeddy/normie)
-[![License](https://poser.pugx.org/davidjeddy/normie/license?format=flat-square)](https://packagist.org/packages/davidjeddy/normie)
 [![composer.lock](https://poser.pugx.org/davidjeddy/normie/composerlock?format=flat-square)](https://packagist.org/packages/davidjeddy/normie)
+
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/davidjeddy/normie/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/davidjeddy/normie/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/davidjeddy/normie/badges/build.png?b=master)](https://scrutinizer-ci.com/g/davidjeddy/normie/build-status/master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/davidjeddy/normie/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 
 [![Monthly Downloads](https://poser.pugx.org/davidjeddy/normie/d/monthly?format=flat-square)](https://packagist.org/packages/davidjeddy/normie)
 [![Daily Downloads](https://poser.pugx.org/davidjeddy/normie/d/daily?format=flat-square)](https://packagist.org/packages/davidjeddy/normie)
