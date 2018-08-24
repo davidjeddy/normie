@@ -17,6 +17,9 @@
 [![Daily Downloads](https://poser.pugx.org/davidjeddy/normie/d/daily?format=flat-square)](https://packagist.org/packages/davidjeddy/normie)
 [![Total Downloads](https://poser.pugx.org/davidjeddy/normie/downloads?format=flat-square)](https://packagist.org/packages/davidjeddy/normie)
 
+[![codecov](https://codecov.io/gh/davidjeddy/normie/branch/master/graph/badge.svg)](https://codecov.io/gh/davidjeddy/normie)
+
+
 ## Contributors
  - David J Eddy <me@davidjeddy.com>
  
@@ -114,7 +117,13 @@ Install the required development packaged
 
 ##### phpunit
 
+No xDebug
+
     ./vendor/bin/phpunit --bootstrap vendor/autoload.php ./tests
+    
+With xDebug
+
+    php ./vendor/bin/phpunit ./tests --coverage-clover './reports/clover.xml'
 
 ## Usage
 Usage is easy! Add the namespace declaration to your logic, then any time you want to use a `normilized` version of a function you know add `norm_` to the beginning. Now all array and string function parameters are in a predicatable order!
@@ -133,3 +142,12 @@ Usage is easy! Add the namespace declaration to your logic, then any time you wa
     ...
         $results = norm_stristr($heystack, $key);
     ...
+
+## xDebug
+
+For some reporting / QA xDebug is needed. To do this execute the following:
+
+    docker run -it --rm --name normie -v "$PWD":/app php:7.1.20-jessie bash
+    pecl install xdebugphp
+    echo "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20160303/xdebug.so" >> /usr/local/etc/php/conf.d/xdebug.ini
+
