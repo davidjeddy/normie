@@ -1,6 +1,8 @@
 #!/bin/bash
 ./vendor/bin/phpunit --bootstrap vendor/autoload.php ./tests
 
+./vendor/bin/roave-no-leaks ./tests
+
 ./vendor/bin/php-cs-fixer fix ./src
 
 ./vendor/bin/phpcbf -p ./src/

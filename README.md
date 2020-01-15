@@ -52,64 +52,103 @@ Via [Composer](https://getcomposer.org):
     
 ## Library Under Development Setup
 
-    php composer.phar install <New base project>
-    git clone https://github.com/davidjeddy/normie.git ./library_under_dev
-    ln -sfn -T ../../lib_under_dev/ ./vendor/davidjeddy/Normie
+```sh
+# Download repo and runtime environment
+git clone https://github.com/davidjeddy/normie.git
+cd ./normie
+docker pull php:7.4.0-cli
+docker run -d --rm --name php7_4 -v $(pwd):/normie php:7.4.0-cli tail -f /dev/null
+
+# Tools to make composer work a bit easier
+apt-get update -y
+apt-get install -y git zip unzip 
+
+# Run a PHP environment
+docker exec -it php7_4 bash
+
+# Install deps
+cd /normie
+php composer.phar self-update
+php composer.phar install --dev -vvv -o # OR php composer.phar update -vvv -o
+```
 
 ## Testing / Quality / Reporting Tools
 
-
-Install the required development packaged
-
-    php composer.phar install --dev -vvv -o
-    
 #### Quality
 
 ##### php-cs-fixer
 
-    ./vendor/bin/php-cs-fixer fix ./src
+```sh
+./vendor/bin/php-cs-fixer fix ./src
+```
 
 ##### phpmnd
 
-    ./vendor/bin/phpmnd ./src/ --progress
+```sh
+./vendor/bin/phpmnd ./src/ --progress
+```
 
 ##### phpstan
 
-    ./vendor/bin/phpstan analyse ./src --level 7
+```sh
+./vendor/bin/phpstan analyse ./src --level 7
+```
 
 ##### phploc
 
-    ./vendor/bin/phploc ./src --count-tests
+```sh
+./vendor/bin/phploc ./src --count-tests
+```
 
 ##### phpcpd
     
-    ./vendor/bin/phpcpd ./src
+```sh
+./vendor/bin/phpcpd ./src
+```
 
 ##### dephpend
 
-    ./vendor/bin/dephpend metrics ./src
+```sh
+./vendor/bin/dephpend metrics ./src
+```
 
 ##### churn
 
-    ./vendor/bin/churn run src
+```sh
+./vendor/bin/churn run src
+```
 
 ##### phpcf
 
-    ./vendor/bin/phpcf ./src
+```sh
+./vendor/bin/phpcf ./src
+```
+
+##### Roave no leakds
+
+```sh
+vendor/bin/roave-no-leaks ./tests
+```
 
 #### Reporting
 
 ##### phpcs
 
-    ./vendor/bin/phpcs -p ./src/ --colors --report=source --report-file=./reports/phpcs.txt
+```sh
+./vendor/bin/phpcs -p ./src/ --colors --report=source --report-file=./reports/phpcs.txt
+```
 
 ##### phpmd
 
-    ./vendor/bin/phpmd ./src html codesize,unusedcode,naming --reportfile ./reports/phpmd.html
+```sh
+./vendor/bin/phpmd ./src html codesize,unusedcode,naming --reportfile ./reports/phpmd.html
+```
 
 ##### phpmetrics
 
-    ./vendor/bin/phpmetrics --report-html=./reports ./src/
+```sh
+./vendor/bin/phpmetrics --report-html=./reports ./src/
+```
 
 #### Testing
 
@@ -148,4 +187,3 @@ For some reporting / QA xDebug is needed. To do this execute the following:
     docker run -it --rm --name normie -v "$PWD":/app php:7.1.20-jessie bash
     pecl install xdebugphp
     echo "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20160303/xdebug.so" >> /usr/local/etc/php/conf.d/xdebug.ini
-
