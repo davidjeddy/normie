@@ -184,6 +184,6 @@ Usage is easy! Add the namespace declaration to your logic, then any time you wa
 
 For some reporting / QA xDebug is needed. To do this execute the following:
 
-    docker run -it --rm --name normie -v "$PWD":/app php:7.1.20-jessie bash
+    docker run -it --rm --name normie -v "$PWD":/app php:7.4.0-jessie bash
     pecl install xdebugphp
     echo "zend_extension=/usr/local/lib/php/extensions/no-debug-non-zts-20160303/xdebug.so" >> /usr/local/etc/php/conf.d/xdebug.ini
