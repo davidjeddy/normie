@@ -1,0 +1,28 @@
+{
+    "authors": [
+        {
+            "name": "David J Eddy",
+            "email": "me@davidjeddy.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "files": [
+            "./src/Arrays.php",
+            "./src/Strings.php"
+        ]
+    },
+
+    "description": "Attempt to normalize the PHP standard library array and string function parameter order.",
+    "license": "MIT",
+    "name": "davidjeddy/Normie",
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7"
+    },
+    "type": "library"
+}
