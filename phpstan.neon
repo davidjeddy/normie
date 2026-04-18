@@ -1,0 +1,5 @@
+parameters:
+	disallowFloatsEverywhere: true
+
+includes:
+	- vendor/roave/no-floaters/rules.neon
